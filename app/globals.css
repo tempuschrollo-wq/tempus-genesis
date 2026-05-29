@@ -712,7 +712,7 @@ textarea.form-input{resize:vertical;min-height:100px;}
 .footer-brand{font-family:var(--font-fraunces),serif;font-weight:500;font-size:1.7rem;color:#f4ead4;letter-spacing:-0.005em;margin-bottom:1rem;}
 .footer-brand em{font-style:italic;color:var(--gold);font-weight:400;}
 .footer-tagline{font-family:var(--font-fraunces),serif;font-style:italic;font-size:14px;color:var(--bone-dim);line-height:1.6;max-width:300px;font-weight:300;margin-bottom:1.5rem;}
-.footer-est{font-family:var(--font-mono),monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(212,175,55,0.4);font-weight:500;}
+.footer-est{font-family:var(--font-mono),monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(212,175,55,0.4);font-weight:500;white-space:nowrap;}
 .footer-col-title{font-family:var(--font-mono),monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;font-weight:600;}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:0.9rem;}
 .footer-links a,.footer-links span{font-family:var(--font-inter),sans-serif;font-size:14px;color:var(--bone-dim);text-decoration:none;transition:color 0.2s;}
