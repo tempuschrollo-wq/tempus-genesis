@@ -63,10 +63,10 @@ export default function Footer() {
           <div className="footer-col-title">Legal</div>
           <ul className="footer-links">
             <li>
-              <span>Terms</span>
+              <Link href="/terms">Terms</Link>
             </li>
             <li>
-              <span>Privacy</span>
+              <Link href="/privacy">Privacy</Link>
             </li>
           </ul>
         </div>
