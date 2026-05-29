@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { IconArrowRight } from "@tabler/icons-react";
 import HeroEmblem from "../HeroEmblem";
+import DiscordPresence from "../DiscordPresence";
 
 const DISCORD_INVITE_URL = "https://discord.gg/nwRam2xxFZ";
 
@@ -71,10 +73,11 @@ export default function Hero() {
           >
             Enter the Server <IconArrowRight size={14} />
           </a>
-          <a className="btn btn-ghost" href="#games">
+          <Link className="btn btn-ghost" href="/games">
             View Portfolio
-          </a>
+          </Link>
         </div>
+        <DiscordPresence />
       </div>
 
       <div className="hero-right">

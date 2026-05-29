@@ -1,18 +1,8 @@
-import Image from "next/image";
+import Link from "next/link";
 import Reveal from "../Reveal";
 import InteractiveGlow from "../InteractiveGlow";
-
-const games = [
-  { name: "RavenQuest", genre: "MMORPG · Web3", img: "raven-logo.png", status: "live" },
-  { name: "Big Time", genre: "Action RPG · NFT", img: "bigtime-logo.jpg", status: "live" },
-  { name: "Thetan Arena", genre: "MOBA · Esports", img: "thetanarena-logo.jpg", status: "live" },
-  { name: "Call of the Void", genre: "FPS · Web3", img: "callofthevoyd-logo.png", status: "live" },
-  { name: "Blast Royale", genre: "Battle Royale · P2E", img: "blastroyale-logo.jpg", status: "live" },
-  { name: "The Desolation", genre: "Survival · Web3", img: "thedesolation-logo.jpg", status: "live" },
-  { name: "Cambria", genre: "RPG · Web3", img: "cambria-logo.png", status: "past" },
-  { name: "Sunflower Land", genre: "Farming · DeFi", img: "sunflowerland-logo.png", status: "past" },
-  { name: "MapleStory Universe", genre: "MMORPG · NFT", img: "maplestory-logo.png", status: "past" },
-];
+import GameCard from "../GameCard";
+import { games } from "../gamesData";
 
 export default function Games() {
   return (
@@ -42,29 +32,7 @@ export default function Games() {
         <Reveal stagger>
           <div className="games-layout">
             {games.map((g, i) => (
-              <InteractiveGlow key={g.name} className="game">
-                <div className="game-cover">
-                  <Image
-                    src={`/assets/${g.img}`}
-                    alt={g.name}
-                    fill
-                    sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-                  />
-                  <span
-                    className={`game-cover-status game-status-${g.status}`}
-                  >
-                    <span className="game-dot"></span>
-                    {g.status === "live" ? "Live" : "Past"}
-                  </span>
-                  <span className="game-cover-num">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                </div>
-                <div className="game-info">
-                  <div className="game-name">{g.name}</div>
-                  <div className="game-genre">{g.genre}</div>
-                </div>
-              </InteractiveGlow>
+              <GameCard key={g.name} game={g} index={i} />
             ))}
             <InteractiveGlow className="more-games">
               <div className="more-games-num">+31</div>
@@ -73,6 +41,11 @@ export default function Games() {
                 We&apos;ve shown up for 40+ Web3 games since 2023 — and we
                 don&apos;t always announce it.
               </div>
+              <Link
+                href="/games"
+                className="more-games-overlay"
+                aria-label="View the full games library"
+              />
             </InteractiveGlow>
           </div>
         </Reveal>

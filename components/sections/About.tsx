@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "../Reveal";
 import InteractiveGlow from "../InteractiveGlow";
 
@@ -73,12 +74,14 @@ export default function About() {
                   across games.
                 </div>
               </InteractiveGlow>
-              <InteractiveGlow className="about-stat">
-                <div className="about-stat-number">40+</div>
-                <div className="about-stat-label">Web3 Games Covered</div>
-                <div className="about-stat-desc">
-                  Active presence and organized participation since 2023.
-                </div>
+              <InteractiveGlow className="about-stat about-stat--link">
+                <Link href="/games" className="about-stat-inner">
+                  <div className="about-stat-number">40+</div>
+                  <div className="about-stat-label">Web3 Games Covered</div>
+                  <div className="about-stat-desc">
+                    Active presence and organized participation since 2023.
+                  </div>
+                </Link>
               </InteractiveGlow>
               <InteractiveGlow className="about-stat">
                 <div className="about-stat-number">

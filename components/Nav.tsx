@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { IconBrandDiscord } from "@tabler/icons-react";
 
 const DISCORD_INVITE_URL = "https://discord.gg/nwRam2xxFZ";
@@ -27,19 +28,19 @@ export default function Nav() {
       </div>
       <ul className="nav-center">
         <li>
-          <a href="#games">Portfolio</a>
+          <Link href="/games">Portfolio</Link>
         </li>
         <li>
-          <a href="#scholarship">Scholarship</a>
+          <Link href="/scholarship">Scholarship</Link>
         </li>
         <li>
-          <a href="#about">Manifesto</a>
+          <Link href="/#about">Manifesto</Link>
         </li>
         <li>
-          <a href="#founders">Founders</a>
+          <Link href="/#founders">Founders</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link href="/#contact">Contact</Link>
         </li>
       </ul>
       <div className="nav-right">

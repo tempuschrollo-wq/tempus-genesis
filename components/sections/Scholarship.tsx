@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "../Reveal";
 import InteractiveGlow from "../InteractiveGlow";
 import { IconArrowRight } from "@tabler/icons-react";
@@ -121,6 +122,9 @@ export default function Scholarship() {
               >
                 Apply for Scholarship <IconArrowRight size={14} />
               </a>
+              <Link className="schol-full-link" href="/scholarship">
+                See the full program <IconArrowRight size={13} />
+              </Link>
             </InteractiveGlow>
           </Reveal>
         </div>

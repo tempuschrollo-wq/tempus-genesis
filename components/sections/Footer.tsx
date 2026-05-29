@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const DISCORD_INVITE_URL = "https://discord.gg/nwRam2xxFZ";
 
 export default function Footer() {
@@ -41,7 +43,7 @@ export default function Footer() {
           <div className="footer-col-title">Community</div>
           <ul className="footer-links">
             <li>
-              <a href="#games">Portfolio</a>
+              <Link href="/games">Portfolio</Link>
             </li>
             <li>
               <a href="#scholarship">Scholarship</a>
@@ -51,6 +53,9 @@ export default function Footer() {
             </li>
             <li>
               <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <Link href="/media-kit">Media Kit</Link>
             </li>
           </ul>
         </div>
@@ -71,7 +76,14 @@ export default function Footer() {
           © 2026 TEMPUS GENESIS · ALL RIGHTS RESERVED
         </span>
         <span className="footer-credit">
-          — BUILT BY MOWEN SOLUTIONS
+          — BUILT BY{" "}
+          <a
+            href="https://mowenn.store"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            MOWEN SOLUTIONS
+          </a>
           <span>·</span>
           DEVELOPED BY{" "}
           <a href="https://x.com/Kagalito" target="_blank" rel="noopener noreferrer">

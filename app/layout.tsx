@@ -30,15 +30,35 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["300", "400", "500"],
 });
 
+// TODO: replace with the real production domain once the site is deployed.
+// OG/Twitter images need absolute URLs — metadataBase resolves the relative
+// /assets path against this origin.
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tempusgenesis.com";
+
+const OG_IMAGE = "/assets/OG-share.png";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Tempus Genesis — A Web3 Gaming Community",
   description:
     "An organized community of Web3 players who take the game seriously. Daily coordination, on-chain alpha, and a scholarship program that opens the door for anyone with skill.",
   openGraph: {
+    type: "website",
+    siteName: "Tempus Genesis",
+    url: SITE_URL,
     title: "Tempus Genesis — A Web3 Gaming Community",
     description:
       "An organized Web3 gaming community. 1,000+ members. 40+ games. Active 24/7 worldwide.",
-    type: "website",
+    images: [OG_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@TempusGenesisW3",
+    creator: "@TempusGenesisW3",
+    title: "Tempus Genesis — A Web3 Gaming Community",
+    description:
+      "An organized Web3 gaming community. 1,000+ members. 40+ games. Active 24/7 worldwide.",
+    images: [OG_IMAGE],
   },
 };
 
