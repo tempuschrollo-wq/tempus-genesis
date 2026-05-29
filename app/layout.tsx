@@ -30,10 +30,10 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["300", "400", "500"],
 });
 
-// TODO: replace with the real production domain once the site is deployed.
-// OG/Twitter images need absolute URLs — metadataBase resolves the relative
-// /assets path against this origin.
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tempusgenesis.com";
+// Production domain. OG/Twitter images need absolute URLs — metadataBase
+// resolves the relative /assets path against this origin.
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://tempusgenesis.space";
 
 const OG_IMAGE = "/assets/OG-share.png";
 
