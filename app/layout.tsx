@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cinzel, Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -30,12 +31,13 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["300", "400", "500"],
 });
 
-// Production domain. OG/Twitter images need absolute URLs — metadataBase
-// resolves the relative /assets path against this origin.
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://tempusgenesis.space";
-
+// SITE_URL (the production origin) is shared from @/lib/site. OG/Twitter
+// images need absolute URLs — metadataBase resolves /assets against it.
 const OG_IMAGE = "/assets/OG-share.png";
+
+// Google Search Console verification token — supplied via env, never hardcoded.
+// Set NEXT_PUBLIC_GSC_VERIFICATION to enable the verification meta tag.
+const GSC_VERIFICATION = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -60,6 +62,9 @@ export const metadata: Metadata = {
       "An organized Web3 gaming community. 1,000+ members. 40+ games. Active 24/7 worldwide.",
     images: [OG_IMAGE],
   },
+  ...(GSC_VERIFICATION
+    ? { verification: { google: GSC_VERIFICATION } }
+    : {}),
 };
 
 export default function RootLayout({
