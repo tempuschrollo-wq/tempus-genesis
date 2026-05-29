@@ -11,24 +11,26 @@ import Contact from "@/components/sections/Contact";
 import Join from "@/components/sections/Join";
 import Footer from "@/components/sections/Footer";
 import SectionTransition from "@/components/SectionTransition";
+import MobileCtaBar from "@/components/MobileCtaBar";
 
 export default function Home() {
   return (
     <>
       <Nav />
       <HourglassScroll />
+      <MobileCtaBar />
       <Hero />
       <Ticker />
       <Games />
-      <SectionTransition num="II" label="SCHOLARSHIP" />
+      <SectionTransition num="II" label="SCHOLARSHIP" major />
       <Scholarship />
-      <SectionTransition num="III" label="MANIFESTO" />
+      <SectionTransition num="III" label="MANIFESTO" major />
       <About />
       <SectionTransition num="IV" label="INSIDE" />
       <Inside />
       <SectionTransition num="V" label="FOUNDERS" />
       <Founders />
-      <SectionTransition num="VI" label="CONTACT" />
+      <SectionTransition num="VI" label="CONTACT" major />
       <Contact />
       <Join />
       <Footer />

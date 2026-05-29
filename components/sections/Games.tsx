@@ -66,18 +66,15 @@ export default function Games() {
                 </div>
               </InteractiveGlow>
             ))}
+            <InteractiveGlow className="more-games">
+              <div className="more-games-num">+31</div>
+              <div className="more-games-text">
+                More titles in our history that didn&apos;t make this list.
+                We&apos;ve shown up for 40+ Web3 games since 2023 — and we
+                don&apos;t always announce it.
+              </div>
+            </InteractiveGlow>
           </div>
-        </Reveal>
-
-        <Reveal>
-          <InteractiveGlow className="more-games">
-            <div className="more-games-num">+31</div>
-            <div className="more-games-text">
-              More titles in our history that didn&apos;t make this list.
-              We&apos;ve shown up for 40+ Web3 games since 2023 — and we
-              don&apos;t always announce it.
-            </div>
-          </InteractiveGlow>
         </Reveal>
       </div>
     </section>

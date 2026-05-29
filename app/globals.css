@@ -496,6 +496,7 @@ h1,h2,h3{font-family:var(--font-fraunces),serif;font-weight:400;line-height:1.05
 .game-genre{font-family:var(--font-mono),monospace;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--bone-mute);font-weight:500;}
 
 .more-games{
+  grid-column:1 / -1;
   margin-top:0;padding:2.5rem 3rem;
   display:flex;align-items:center;gap:2.5rem;
   background:var(--ink-soft);border-top:1px solid var(--border-f);
@@ -740,6 +741,8 @@ textarea.form-input{resize:vertical;min-height:100px;}
 .footer-credit a:hover{color:var(--gold);}
 .footer-credit span{opacity:0.4;}
 
+.mobile-cta-bar{display:none;}
+
 .game.interactive-glow,
 .more-games.interactive-glow,
 .schol-flow.interactive-glow,
@@ -789,6 +792,69 @@ textarea.form-input{resize:vertical;min-height:100px;}
   .section-header{grid-template-columns:1fr;gap:1.5rem;}
   .section-num{font-size:3.5rem;}
 }
+@media (max-width:768px){
+  section{padding-block:var(--section-y-tight);}
+  .hero{min-height:auto;}
+  .hero-inner{min-height:auto;}
+  .join-inner{padding-block:var(--section-y-tight);}
+  .footer{padding-block:var(--section-y-tight) 2rem;}
+  .ticker{padding:1.1rem 0;}
+
+  .section-transition{padding:1rem var(--container-pad);gap:0.75rem;}
+  .section-transition.is-major{padding-block:1.75rem;}
+  .section-transition:not(.is-major){padding-block:0.75rem;}
+  .section-transition:not(.is-major) .section-transition-mark svg{display:none;}
+  .section-transition:not(.is-major) .section-transition-mark{font-size:9px;letter-spacing:0.24em;}
+
+  .games-layout{
+    display:flex;gap:12px;overflow-x:auto;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    padding-inline:var(--container-pad);
+    margin-inline:calc(-1 * var(--container-pad));
+    background:transparent;border:0;scrollbar-width:none;
+  }
+  .games-layout::-webkit-scrollbar{display:none;}
+  .games-layout > *{flex:0 0 78%;scroll-snap-align:start;}
+  .game-cover{height:180px;}
+  .more-games{
+    grid-column:auto;min-height:316px;padding:1.6rem;
+    flex-direction:column;align-items:flex-start;justify-content:center;
+    border:1px solid rgba(212,175,55,0.12);
+  }
+  .more-games-num{font-size:3.1rem;}
+  .more-games-text{font-size:0.95rem;line-height:1.45;}
+
+  .inside-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;background:transparent;border:0;}
+  .inside-card{padding:1.4rem 1rem 1.2rem;}
+  .inside-card-num{top:0.9rem;right:0.9rem;font-size:0.8rem;}
+  .inside-card-icon{margin-bottom:0.8rem;}
+  .inside-card-title{font-size:1.05rem;line-height:1.1;}
+  .inside-card-desc{font-size:12px;line-height:1.5;}
+
+  .about-pillars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0;}
+  .about-pillar{display:block;padding:1rem;border:1px solid var(--border-f);}
+  .about-pillar:first-child{padding-top:1rem;}
+  .about-pillar-num{margin:0 0 0.45rem;font-size:10px;}
+  .about-pillar-title{font-size:1rem;line-height:1.15;}
+  .about-pillar-desc{font-size:12px;line-height:1.5;}
+
+  .mobile-cta-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:180;
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:rgba(5,5,5,0.94);
+    border-top:0.5px solid rgba(212,175,55,0.3);
+    color:var(--gold);text-decoration:none;
+    font-family:var(--font-mono),monospace;font-size:10px;font-weight:600;
+    letter-spacing:0.18em;text-transform:uppercase;
+    transform:translateY(110%);transition:transform 0.25s ease;
+    backdrop-filter:blur(16px);
+  }
+  .mobile-cta-bar.is-visible{transform:translateY(0);}
+}
+@media (prefers-reduced-motion:reduce){
+  .mobile-cta-bar{transition:none;}
+}
 @media (max-width:600px){
   .hero-title{font-size:3.2rem;}
   .hero-sub{font-size:9px;letter-spacing:0.28em;}
@@ -799,6 +865,6 @@ textarea.form-input{resize:vertical;min-height:100px;}
   .nav-logo-mini{width:30px;height:30px;}
   .nav-name{font-size:14px;}
   .nav-cta{padding:8px 12px;font-size:10px;letter-spacing:0.1em;}
-  .games-layout,.inside-grid,.founders-grid{grid-template-columns:1fr;}
+  .founders-grid{grid-template-columns:1fr;}
   .footer-inner{grid-template-columns:1fr;}
 }
