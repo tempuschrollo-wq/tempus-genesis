@@ -57,7 +57,7 @@ export default function Scholarship() {
         <div className="section-bg-blob"></div>
         <div className="section-bg-blob b2"></div>
       </div>
-      <div className="section-frame">
+      <div className="section-frame tg-container">
         <Reveal>
           <div className="section-header">
             <div className="section-num">II</div>

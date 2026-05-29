@@ -3,7 +3,7 @@ const DISCORD_INVITE_URL = "https://discord.gg/nwRam2xxFZ";
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-inner">
+      <div className="footer-inner tg-container">
         <div>
           <div className="footer-brand">
             Tempus <em>Genesis</em>
@@ -66,7 +66,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className="footer-bottom tg-container">
         <span className="footer-copy">
           © 2026 TEMPUS GENESIS · ALL RIGHTS RESERVED
         </span>

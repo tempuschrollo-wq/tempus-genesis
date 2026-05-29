@@ -47,6 +47,7 @@ export default function Hero() {
       <span className="hero-mark bl">— Built by players, for players —</span>
       <span className="hero-mark br">Scroll to descend ↘</span>
 
+      <div className="hero-inner tg-container">
       <div className="hero-left">
         <div className="hero-eyebrow">
           <span className="hero-eyebrow-line"></span>
@@ -107,6 +108,8 @@ export default function Hero() {
             </div>
           </div>
         </div>
+      </div>
+
       </div>
 
       <div className="hero-scroll-cue">Scroll</div>

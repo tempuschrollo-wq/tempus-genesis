@@ -16,6 +16,7 @@ export default function Join() {
         <div className="section-bg-blob b2"></div>
       </div>
       <div className="join-bg"></div>
+      <div className="join-inner tg-container">
       <svg className="join-hg-finale" viewBox="0 0 32 48">
         <rect x="3" y="2" width="26" height="3" rx="1" fill="#D4AF37" opacity="0.6" />
         <rect x="3" y="43" width="26" height="3" rx="1" fill="#D4AF37" opacity="0.6" />
@@ -70,6 +71,7 @@ export default function Join() {
         <a className="join-social" href="mailto:tempusgenesis@gmail.com">
           <IconMail size={14} /> Email
         </a>
+      </div>
       </div>
     </section>
   );
