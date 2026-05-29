@@ -1120,3 +1120,31 @@ textarea.form-input{resize:vertical;min-height:100px;}
   0%,100%{opacity:1;transform:scale(1);}
   50%{opacity:0.45;transform:scale(0.78);}
 }
+
+/* ── WS12 — mobile spacing cleanup ──
+   Scoped to content sections on /, /scholarship, /media-kit. The global
+   section / .section-transition / .section-header / .footer rules are left
+   untouched so /games (the spacing reference) stays pixel-identical.
+   The pre-Founders decorative area (.founders-section + its divider) is
+   excluded here — that is WS13. */
+@media (max-width:768px){
+  /* Homepage content sections: trim oversized inter-section padding. */
+  .games-section,
+  .scholarship,
+  .about,
+  .inside-section,
+  .contact{padding-block:2rem;}
+  .join-inner{padding-block:2.5rem;}
+
+  /* /scholarship + /media-kit page sections (NOT /games .games-page-section).
+     The .is-tight variants need the extra class to beat section.is-tight. */
+  .schp-section,
+  .schp-section.is-tight,
+  .mk-section,
+  .mk-section.is-tight{padding-block:2rem;}
+
+  /* Page heroes: keep nav clearance, cut the gap down to the first section.
+     .games-page-hero intentionally excluded (reference page). */
+  .schp-hero,
+  .mk-hero{padding-block:calc(var(--section-y-tight) + 2.5rem) 1.5rem;}
+}
