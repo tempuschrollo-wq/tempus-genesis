@@ -1,7 +1,5 @@
-"use client";
-
-import Image from "next/image";
 import { IconArrowRight } from "@tabler/icons-react";
+import HeroEmblem from "../HeroEmblem";
 
 const DISCORD_INVITE_URL = "https://discord.gg/nwRam2xxFZ";
 
@@ -93,20 +91,7 @@ export default function Hero() {
           <div className="stage-corner tr"></div>
           <div className="stage-corner bl"></div>
           <div className="stage-corner br"></div>
-          <div className="stage-logo-wrap">
-            <div className="stage-logo-orb">
-              <div className="stage-logo-plate">
-                <Image
-                  className="stage-logo-image"
-                  src="/assets/TG-logo.png"
-                  alt="Tempus Genesis"
-                  width={400}
-                  height={400}
-                  priority
-                />
-              </div>
-            </div>
-          </div>
+          <HeroEmblem />
         </div>
       </div>
 
