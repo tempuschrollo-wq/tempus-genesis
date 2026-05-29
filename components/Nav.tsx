@@ -21,7 +21,7 @@ export default function Nav() {
       <Link
         href="/"
         className="nav-left nav-brand"
-        aria-label="Tempus Genesis — home"
+        aria-label="Tempus Genesis, home"
       >
         <div className="nav-logo-mini">
           <Image src="/assets/TG-logo.png" alt="" width={22} height={28} />

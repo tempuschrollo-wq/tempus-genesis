@@ -13,13 +13,13 @@ import SectionTransition from "@/components/SectionTransition";
 import ColorSwatch from "@/components/ColorSwatch";
 
 export const metadata: Metadata = {
-  title: "Media Kit — Tempus Genesis",
+  title: "Media Kit · Tempus Genesis",
   description:
-    "Press and brand assets for Tempus Genesis — logos, brand graphics, color palette, and usage guidelines. Everything you need to feature the community.",
+    "Press and brand assets for Tempus Genesis. Logos, brand graphics, color palette, and usage guidelines. Everything you need to feature the community.",
   openGraph: {
     type: "website",
     siteName: "Tempus Genesis",
-    title: "Media Kit — Tempus Genesis",
+    title: "Media Kit · Tempus Genesis",
     description:
       "Download Tempus Genesis logos and brand assets, with color palette and usage guidelines.",
     images: ["/assets/OG-share.png"],
@@ -32,12 +32,12 @@ const ASSET_BASE = "/assets/page";
 const primaryMarks = [
   {
     file: "media-kit1.png",
-    label: "Primary mark — dimensional",
+    label: "Primary mark · dimensional",
     note: "The full chrome-and-gold hourglass. Use as the hero mark where you have room for detail.",
   },
   {
     file: "media-kit2.png",
-    label: "Mono mark — reversed",
+    label: "Mono mark · reversed",
     note: "Clean white hourglass with the gold compass. Built for dark backgrounds; keep it off light fills.",
   },
 ];
@@ -65,7 +65,7 @@ const palette = [
 ];
 
 const guidelines = [
-  { kind: "do", text: "Keep clear space around the mark — at least the height of the hourglass on every side." },
+  { kind: "do", text: "Keep clear space around the mark, at least the height of the hourglass on every side." },
   { kind: "do", text: "Use the reversed white mark on dark backgrounds, and the full-color mark where contrast allows." },
   { kind: "do", text: "Scale the logo proportionally so the hourglass and compass stay legible." },
   { kind: "dont", text: "Don't recolor, add gradients, or swap the gold for another accent." },
@@ -89,7 +89,7 @@ export default function MediaKitPage() {
               <p className="section-eye mk-hero-eye">Media Kit</p>
               <h1 className="mk-hero-title">Press &amp; brand assets</h1>
               <p className="mk-hero-sub">
-                Everything you need to feature Tempus Genesis — logos, brand
+                Everything you need to feature Tempus Genesis. Logos, brand
                 graphics, colors, and the rules that keep them looking right.
               </p>
             </Reveal>
@@ -158,7 +158,7 @@ export default function MediaKitPage() {
           </div>
         </section>
 
-        <SectionTransition num="—" label="ASSETS" major />
+        <SectionTransition num="◆" label="ASSETS" major />
 
         {/* 3 — BRAND GRAPHICS GRID */}
         <section className="mk-section">
@@ -186,7 +186,7 @@ export default function MediaKitPage() {
                     <div className="mk-tile-img">
                       <Image
                         src={`${ASSET_BASE}/${file}`}
-                        alt={`Tempus Genesis brand graphic — ${file}`}
+                        alt={`Tempus Genesis brand graphic, ${file}`}
                         fill
                         loading="lazy"
                         sizes="(max-width: 900px) 50vw, 33vw"
@@ -212,7 +212,7 @@ export default function MediaKitPage() {
                   <div className="mk-tile-img">
                     <Image
                       src={`${ASSET_BASE}/${miscAsset}`}
-                      alt="Tempus Genesis branded sticker — community photo"
+                      alt="Tempus Genesis branded sticker, community photo"
                       fill
                       loading="lazy"
                       sizes="(max-width: 900px) 50vw, 33vw"
@@ -232,7 +232,7 @@ export default function MediaKitPage() {
           </div>
         </section>
 
-        <SectionTransition num="—" label="SYSTEM" />
+        <SectionTransition num="◆" label="SYSTEM" />
 
         {/* 4 — COLOR PALETTE */}
         <section className="mk-section is-tight">

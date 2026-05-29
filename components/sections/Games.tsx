@@ -22,7 +22,7 @@ export default function Games() {
               </h2>
               <p className="section-lead">
                 A selection from our 40+ game history. From pre-launch
-                coordination to live-season raids — Tempus Genesis has been an
+                coordination to live-season raids. Tempus Genesis has been an
                 active presence across the most significant Web3 titles.
               </p>
             </div>
@@ -38,7 +38,7 @@ export default function Games() {
               <div className="more-games-num">+31</div>
               <div className="more-games-text">
                 More titles in our history that didn&apos;t make this list.
-                We&apos;ve shown up for 40+ Web3 games since 2023 — and we
+                We&apos;ve shown up for 40+ Web3 games since 2023, and we
                 don&apos;t always announce it.
               </div>
               <Link

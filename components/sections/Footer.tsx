@@ -14,7 +14,7 @@ export default function Footer() {
             An organized Web3 gaming community for players who take the game
             seriously. Daily coordination, on-chain alpha, scholarship program.
           </p>
-          <div className="footer-est">— Est. MMXXIII · Worldwide —</div>
+          <div className="footer-est">Est. MMXXIII · Worldwide</div>
         </div>
         <div>
           <div className="footer-col-title">Connect</div>
@@ -76,7 +76,7 @@ export default function Footer() {
           © 2026 TEMPUS GENESIS · ALL RIGHTS RESERVED
         </span>
         <span className="footer-credit">
-          — BUILT BY{" "}
+          BUILT BY{" "}
           <a
             href="https://mowenn.store"
             target="_blank"
@@ -88,8 +88,7 @@ export default function Footer() {
           DEVELOPED BY{" "}
           <a href="https://x.com/Kagalito" target="_blank" rel="noopener noreferrer">
             @KAGALI
-          </a>{" "}
-          —
+          </a>
         </span>
       </div>
     </footer>

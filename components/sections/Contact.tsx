@@ -39,7 +39,7 @@ export default function Contact() {
               </h2>
               <p className="section-lead">
                 Join the community, explore a scholarship, or collaborate with
-                Tempus Genesis — we read every message.
+                Tempus Genesis. We read every message.
               </p>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function Contact() {
                 Reach <em>us</em> directly.
               </h3>
               <p>
-                Whether you&apos;re a player, a project, or a partner — start
+                Whether you&apos;re a player, a project, or a partner, start
                 with one of these.
               </p>
               <div className="contact-channels">
@@ -140,7 +140,7 @@ export default function Contact() {
                       id="contact-name"
                       className="form-input"
                       type="text"
-                      placeholder="—"
+                      placeholder=""
                     />
                   </div>
                   <div className="form-field" style={{ marginBottom: 0 }}>
@@ -151,7 +151,7 @@ export default function Contact() {
                       id="contact-email"
                       className="form-input"
                       type="email"
-                      placeholder="—"
+                      placeholder=""
                     />
                   </div>
                 </div>
@@ -166,7 +166,7 @@ export default function Contact() {
                     id="contact-discord"
                     className="form-input"
                     type="text"
-                    placeholder="—"
+                    placeholder=""
                   />
                 </div>
                 <div className="form-field">
@@ -179,7 +179,7 @@ export default function Contact() {
                     defaultValue=""
                   >
                     <option value="" disabled>
-                      — Select —
+                      Select
                     </option>
                     <option value="join">Join the Community</option>
                     <option value="schol">Scholarship Inquiry</option>
@@ -194,7 +194,7 @@ export default function Contact() {
                   <textarea
                     id="contact-message"
                     className="form-input"
-                    placeholder="—"
+                    placeholder=""
                   />
                 </div>
                 <button type="submit" className="btn btn-primary form-submit">

@@ -44,7 +44,7 @@ export default function Hero() {
         <br />
         <span style={{ color: "rgba(212,175,55,0.25)" }}>Worldwide</span>
       </span>
-      <span className="hero-mark bl">— Built by players, for players —</span>
+      <span className="hero-mark bl">Built by players, for players</span>
       <span className="hero-mark br">Scroll to descend ↘</span>
 
       <div className="hero-inner tg-container">
@@ -58,7 +58,7 @@ export default function Hero() {
           <span className="l1">Tempus</span>
           <span className="l2">Genesis</span>
         </h1>
-        <p className="hero-sub">— Where Time Meets Onchain —</p>
+        <p className="hero-sub">Where Time Meets Onchain</p>
         <p className="hero-desc">
           An organized community of Web3 players who take the game seriously.
           Daily coordination, on-chain alpha, and a scholarship program that

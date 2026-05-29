@@ -6,22 +6,22 @@ const pillars = [
   {
     num: "01",
     title: "Daily Active Coordination",
-    desc: "Real channels per game — boss schedules, raid teams, quest tracking. No noise, no dead chat, no filler.",
+    desc: "Real channels per game. Boss schedules, raid teams, quest tracking. No noise, no dead chat, no filler.",
   },
   {
     num: "02",
     title: "On-Chain Strategy & Alpha",
-    desc: "Token analysis, early access drops, airdrop coordination, and on-chain moves — shared in real time.",
+    desc: "Token analysis, early access drops, airdrop coordination, and on-chain moves, shared in real time.",
   },
   {
     num: "03",
     title: "Multi-Game Coverage",
-    desc: "We follow the games that matter, across genres and chains. When a new title launches — we're already there.",
+    desc: "We follow the games that matter, across genres and chains. When a new title launches, we're already there.",
   },
   {
     num: "04",
     title: "Scholarship Program",
-    desc: "We back skilled players without assets. Full lending, revenue split, and mentorship — a real opportunity, not a transaction.",
+    desc: "We back skilled players without assets. Full lending, revenue split, and mentorship. A real opportunity, not a transaction.",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function About() {
               </h2>
               <p className="section-lead">
                 Tempus Genesis is structured, organized, and serious about Web3
-                gaming. We don&apos;t just collect members — we build players.
+                gaming. We don&apos;t just collect members. We build players.
               </p>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function About() {
                 <div className="about-stat-number">1K+</div>
                 <div className="about-stat-label">Community Members</div>
                 <div className="about-stat-desc">
-                  With 100–200 active every single day — across time zones,
+                  With 100-200 active every single day, across time zones,
                   across games.
                 </div>
               </InteractiveGlow>
@@ -89,7 +89,7 @@ export default function About() {
                 </div>
                 <div className="about-stat-label">Community Support</div>
                 <div className="about-stat-desc">
-                  Coordination running round the clock — no dead hours, no off
+                  Coordination running round the clock, no dead hours, no off
                   days.
                 </div>
               </InteractiveGlow>

@@ -45,7 +45,7 @@ export default function Founders() {
               </h2>
               <p className="section-lead">
                 Players first. Operators always. The team behind Tempus Genesis
-                is in the game with you — not above it.
+                is in the game with you, not above it.
               </p>
             </div>
           </div>

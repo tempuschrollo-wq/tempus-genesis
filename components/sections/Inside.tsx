@@ -14,13 +14,13 @@ const cards = [
     num: "i.",
     Icon: IconSword,
     title: "Game Channels",
-    desc: "Dedicated per title — boss timers, meta discussions, daily quest tracking, party calls.",
+    desc: "Dedicated per title. Boss timers, meta discussions, daily quest tracking, party calls.",
   },
   {
     num: "ii.",
     Icon: IconChartLine,
     title: "On-Chain Alpha",
-    desc: "Token news, early access drops, airdrop coordination — shared by the community, for the community.",
+    desc: "Token news, early access drops, airdrop coordination, shared by the community, for the community.",
   },
   {
     num: "iii.",
@@ -38,13 +38,13 @@ const cards = [
     num: "v.",
     Icon: IconBook,
     title: "Guides & Resources",
-    desc: "Curated beginner and advanced strategy guides — maintained and refined by the community.",
+    desc: "Curated beginner and advanced strategy guides, maintained and refined by the community.",
   },
   {
     num: "vi.",
     Icon: IconClock,
     title: "Live Dashboards",
-    desc: "Auto-posted boss schedules, game events, daily alerts — twice a day, every day.",
+    desc: "Auto-posted boss schedules, game events, daily alerts, twice a day, every day.",
   },
 ];
 

@@ -7,13 +7,13 @@ import GamesLibrary from "@/components/GamesLibrary";
 import { historyTitles } from "@/components/gamesData";
 
 export const metadata: Metadata = {
-  title: "Game Library — Tempus Genesis",
+  title: "Game Library · Tempus Genesis",
   description:
-    "The full Tempus Genesis game library — 40+ Web3 titles across live and past seasons, from featured games we actively cover to our wider history.",
+    "The full Tempus Genesis game library. 40+ Web3 titles across live and past seasons, from featured games we actively cover to our wider history.",
   openGraph: {
     type: "website",
     siteName: "Tempus Genesis",
-    title: "Game Library — Tempus Genesis",
+    title: "Game Library · Tempus Genesis",
     description:
       "40+ Web3 games across live and past seasons. Featured titles plus the full history Tempus Genesis has shown up for.",
     images: ["/assets/OG-share.png"],
@@ -36,7 +36,7 @@ export default function GamesPage() {
               <p className="section-eye games-page-eye">Game Portfolio</p>
               <h1 className="games-page-title">The full library</h1>
               <p className="games-page-sub">
-                40+ Web3 titles across live and past seasons — from the games
+                40+ Web3 titles across live and past seasons, from the games
                 we actively cover today to the wider history Tempus Genesis has
                 shown up for since 2023.
               </p>
@@ -56,7 +56,7 @@ export default function GamesPage() {
                     Games we&apos;ve <em>shown up for</em>
                   </h2>
                   <p className="section-lead">
-                    The titles with verified status — currently active seasons
+                    The titles with verified status, currently active seasons
                     and past campaigns. Filter by where they stand today.
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export default function GamesPage() {
           </div>
         </section>
 
-        <SectionTransition num="—" label="HISTORY" major />
+        <SectionTransition num="◆" label="HISTORY" major />
 
         {/* 3 — FULL HISTORY CHIPS */}
         <section className="games-page-section is-tight">
@@ -81,7 +81,7 @@ export default function GamesPage() {
                   </h2>
                   <p className="section-lead">
                     A selection of the other Web3 titles we&apos;ve taken part
-                    in over the years. Names only — no live/past status claimed.
+                    in over the years. Names only, no live/past status claimed.
                   </p>
                 </div>
               </div>

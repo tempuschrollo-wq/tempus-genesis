@@ -11,13 +11,13 @@ import SectionTransition from "@/components/SectionTransition";
 const DISCORD_INVITE_URL = "https://discord.gg/nwRam2xxFZ";
 
 export const metadata: Metadata = {
-  title: "Scholarship Program — Tempus Genesis",
+  title: "Scholarship Program · Tempus Genesis",
   description:
-    "Skill is the only entry fee. Tempus Genesis backs talented Web3 players with assets, a transparent revenue split, mentorship, and real hardware — see the rigs we've delivered to scholars.",
+    "Skill is the only entry fee. Tempus Genesis backs talented Web3 players with assets, a transparent revenue split, mentorship, and real hardware. See the rigs we've delivered to scholars.",
   openGraph: {
     type: "website",
     siteName: "Tempus Genesis",
-    title: "Scholarship Program — Tempus Genesis",
+    title: "Scholarship Program · Tempus Genesis",
     description:
       "Full asset support, transparent revenue split, coaching, and a path to independence for skilled Web3 players. Real PC builds delivered to scholars.",
     images: ["/assets/OG-share.png"],
@@ -28,12 +28,12 @@ const benefits = [
   {
     num: "i.",
     title: "Asset Lending",
-    desc: "NFT assets and in-game items provided by guild managers. Zero upfront cost — you play, we provide. Every scholar is matched to a portfolio sized for their game and skill level.",
+    desc: "NFT assets and in-game items provided by guild managers. Zero upfront cost. You play, we provide. Every scholar is matched to a portfolio sized for their game and skill level.",
   },
   {
     num: "ii.",
     title: "Revenue Split",
-    desc: "Transparent profit sharing every cycle. No hidden fees, no surprises. The split is agreed up front, and your earnings scale with your performance — not with how much you can afford to buy in.",
+    desc: "Transparent profit sharing every cycle. No hidden fees, no surprises. The split is agreed up front, and your earnings scale with your performance, not with how much you can afford to buy in.",
   },
   {
     num: "iii.",
@@ -109,9 +109,9 @@ const builds = [
 const rigCount = builds.length;
 
 const eligibility = [
-  "Genuine skill in at least one supported Web3 title — ranked, competitive, or proven track record.",
+  "Genuine skill in at least one supported Web3 title. Ranked, competitive, or proven track record.",
   "A consistent weekly time commitment (we'll align on hours during matching).",
-  "An active Discord presence — daily coordination happens there.",
+  "An active Discord presence. Daily coordination happens there.",
   "A wallet you control, and a willingness to learn on-chain basics if you're new.",
   "Good standing: no asset misuse, account sharing, or toxic behavior.",
 ];
@@ -131,11 +131,11 @@ const faqs = [
   },
   {
     q: "Who owns the assets and the hardware?",
-    a: "Lent NFT assets remain guild-owned while you play with them. Hardware delivered to a scholar is part of that scholar's setup — built and shipped to support serious, consistent performers.",
+    a: "Lent NFT assets remain guild-owned while you play with them. Hardware delivered to a scholar is part of that scholar's setup, built and shipped to support serious, consistent performers.",
   },
   {
     q: "How does matching work?",
-    a: "After you apply on Discord, we pair you with a guild manager based on your game, timezone, and skill profile — so you're set up with the right portfolio and the right mentor from day one.",
+    a: "After you apply on Discord, we pair you with a guild manager based on your game, timezone, and skill profile, so you're set up with the right portfolio and the right mentor from day one.",
   },
 ];
 
@@ -157,8 +157,8 @@ export default function ScholarshipPage() {
                 Skill is the <span>only</span> entry fee
               </h1>
               <p className="schp-hero-sub">
-                We back talented players who have the skill but not the assets —
-                full asset support, a transparent revenue split, real
+                We back talented players who have the skill but not the assets.
+                Full asset support, a transparent revenue split, real
                 mentorship, and a path to independence.
               </p>
               <div className="schp-hero-actions">
@@ -240,7 +240,7 @@ export default function ScholarshipPage() {
           </div>
         </section>
 
-        <SectionTransition num="—" label="REAL RIGS" major />
+        <SectionTransition num="◆" label="REAL RIGS" major />
 
         {/* 4 — REAL RIGS GALLERY */}
         <section id="rigs" className="schp-section">
@@ -254,7 +254,7 @@ export default function ScholarshipPage() {
                     We deliver <em>hardware</em>, not just promises
                   </h2>
                   <p className="section-lead">
-                    Every scholarship is backed by real support — including the
+                    Every scholarship is backed by real support, including the
                     machines our scholars play on. These are builds we&apos;ve
                     assembled and delivered.
                   </p>
@@ -278,7 +278,7 @@ export default function ScholarshipPage() {
                         <InteractiveGlow key={file} className="schp-tile">
                           <Image
                             src={`/assets/page/${file}`}
-                            alt={`PC build delivered to a Tempus Genesis scholar — ${build.label}`}
+                            alt={`PC build delivered to a Tempus Genesis scholar, ${build.label}`}
                             fill
                             loading="lazy"
                             sizes="(max-width: 900px) 50vw, 33vw"
@@ -293,7 +293,7 @@ export default function ScholarshipPage() {
           </div>
         </section>
 
-        <SectionTransition num="—" label="DETAILS" />
+        <SectionTransition num="◆" label="DETAILS" />
 
         {/* 5 — ELIGIBILITY */}
         <section className="schp-section is-tight">

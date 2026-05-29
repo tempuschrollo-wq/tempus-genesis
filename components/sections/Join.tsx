@@ -33,7 +33,7 @@ export default function Join() {
         starts here
       </h1>
       <p className="join-sub">
-        — 1,000+ members. Active every day. Find your game. —
+        1,000+ members. Active every day. Find your game.
       </p>
       <a
         className="btn btn-primary join-cta"

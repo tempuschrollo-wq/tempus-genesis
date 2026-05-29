@@ -9,7 +9,7 @@ const benefits = [
   {
     num: "i.",
     title: "Asset Lending",
-    desc: "NFT assets and in-game items provided by guild managers. Zero upfront cost — you play, we provide.",
+    desc: "NFT assets and in-game items provided by guild managers. Zero upfront cost. You play, we provide.",
   },
   {
     num: "ii.",
