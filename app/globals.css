@@ -695,8 +695,10 @@ textarea.form-input{resize:vertical;min-height:100px;}
   top:-200px;left:10%;
 }
 .join-hg-finale{position:absolute;left:50%;top:6%;transform:translateX(-50%);width:60px;height:90px;opacity:0.5;z-index:2;}
-.join-eye{font-family:var(--font-mono),monospace;font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:14px;justify-content:center;font-weight:500;position:relative;z-index:2;}
+.join-eye{font-family:var(--font-mono),monospace;font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1.5rem;justify-content:center;font-weight:500;position:relative;z-index:2;}
 .join-eye::before,.join-eye::after{content:'';width:36px;height:1px;background:var(--gold);}
+/* compensate the text's trailing letter-spacing so both rules sit symmetric */
+.join-eye::after{margin-left:-0.35em;}
 .join-title{font-family:var(--font-fraunces),serif;font-weight:400;font-size:clamp(2.8rem,6.5vw,5.2rem);line-height:1;color:#f4ead4;letter-spacing:-0.02em;margin-bottom:1.4rem;font-variation-settings:"opsz" 144;position:relative;z-index:2;}
 .join-title em{font-style:italic;color:var(--gold);font-weight:300;}
 .join-sub{font-family:var(--font-fraunces),serif;font-style:italic;font-size:1.25rem;color:var(--bone-dim);margin-bottom:3rem;font-weight:300;position:relative;z-index:2;}
