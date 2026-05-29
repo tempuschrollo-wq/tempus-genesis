@@ -28,7 +28,7 @@ export default function Home() {
       <About />
       <SectionTransition num="IV" label="INSIDE" />
       <Inside />
-      <SectionTransition num="V" label="FOUNDERS" />
+      <SectionTransition num="V" label="FOUNDERS" className="to-founders" />
       <Founders />
       <SectionTransition num="VI" label="CONTACT" major />
       <Contact />

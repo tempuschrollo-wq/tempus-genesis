@@ -2,11 +2,19 @@ interface Props {
   num: string;
   label: string;
   major?: boolean;
+  className?: string;
 }
 
-export default function SectionTransition({ num, label, major = false }: Props) {
+export default function SectionTransition({
+  num,
+  label,
+  major = false,
+  className = "",
+}: Props) {
   return (
-    <div className={`section-transition ${major ? "is-major" : ""}`}>
+    <div
+      className={`section-transition ${major ? "is-major" : ""} ${className}`.trim()}
+    >
       <span className="section-transition-line"></span>
       <span className="section-transition-mark">
         <svg viewBox="0 0 12 18" fill="none">

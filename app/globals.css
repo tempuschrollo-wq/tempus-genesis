@@ -1148,3 +1148,19 @@ textarea.form-input{resize:vertical;min-height:100px;}
   .schp-hero,
   .mk-hero{padding-block:calc(var(--section-y-tight) + 2.5rem) 1.5rem;}
 }
+
+/* ── WS13 — pre-Founders transition (Inside -> Founders) ──
+   The V / FOUNDERS divider used to float in ~325px of empty space. Keep the
+   existing centered motif but compact it into a deliberate beat: shrink its
+   own padding and pull the adjacent sections in via negative margins (the
+   sections' own internal padding is left untouched). */
+.section-transition.to-founders{
+  padding-block:1.75rem;
+  margin-block:calc(-0.5 * var(--section-y));
+}
+@media (max-width:768px){
+  .section-transition.to-founders{
+    padding-block:1rem;
+    margin-block:calc(-0.5 * var(--section-y-tight));
+  }
+}
