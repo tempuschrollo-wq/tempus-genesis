@@ -74,13 +74,14 @@ h1,h2,h3{font-family:var(--font-fraunces),serif;font-weight:400;line-height:1.05
   border-bottom:1px solid var(--border-f);
 }
 .nav-left{display:flex;align-items:center;gap:14px;}
+.nav-brand{justify-self:start;text-decoration:none;}
 .nav-logo-mini{width:34px;height:34px;display:flex;align-items:center;justify-content:center;position:relative;}
 .nav-logo-mini::before{content:'';position:absolute;inset:0;border:1px solid var(--border);}
 .nav-logo-mini img{width:22px;height:auto;}
 .nav-name{font-family:var(--font-fraunces),serif;font-weight:500;font-size:16px;letter-spacing:0.04em;color:var(--bone);}
 .nav-name em{font-style:italic;font-weight:400;color:var(--gold);}
 .nav-center{display:flex;gap:2.4rem;list-style:none;justify-content:center;}
-.nav-center a{font-family:var(--font-mono),monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--bone-mute);text-decoration:none;transition:color 0.2s;font-weight:400;}
+.nav-center a{font-family:var(--font-mono),monospace;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--bone-dim);text-decoration:none;transition:color 0.2s;font-weight:400;}
 .nav-center a:hover{color:var(--gold);}
 .nav-right{display:flex;justify-content:flex-end;align-items:center;gap:14px;}
 .nav-cta{font-family:var(--font-mono),monospace;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);background:transparent;border:1px solid var(--border);padding:9px 20px;cursor:pointer;transition:all 0.25s;display:flex;align-items:center;gap:8px;text-decoration:none;}

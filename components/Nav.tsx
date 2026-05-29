@@ -18,14 +18,18 @@ export default function Nav() {
 
   return (
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
-      <div className="nav-left">
+      <Link
+        href="/"
+        className="nav-left nav-brand"
+        aria-label="Tempus Genesis — home"
+      >
         <div className="nav-logo-mini">
           <Image src="/assets/TG-logo.png" alt="" width={22} height={28} />
         </div>
         <span className="nav-name">
           Tempus <em>Genesis</em>
         </span>
-      </div>
+      </Link>
       <ul className="nav-center">
         <li>
           <Link href="/games">Portfolio</Link>
