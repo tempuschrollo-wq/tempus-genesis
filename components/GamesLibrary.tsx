@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import GameCard from "./GameCard";
-import { games } from "./gamesData";
+import { featuredGames } from "./gamesData";
 
 type Filter = "all" | "active" | "past";
 
@@ -12,11 +12,17 @@ const FILTERS: { key: Filter; label: string }[] = [
   { key: "past", label: "Past" },
 ];
 
+const counts: Record<Filter, number> = {
+  all: featuredGames.length,
+  active: featuredGames.filter((g) => g.status === "active").length,
+  past: featuredGames.filter((g) => g.status === "past").length,
+};
+
 export default function GamesLibrary() {
   const [filter, setFilter] = useState<Filter>("all");
 
-  const visible = games.filter((g) => {
-    if (filter === "active") return g.status === "live";
+  const visible = featuredGames.filter((g) => {
+    if (filter === "active") return g.status === "active";
     if (filter === "past") return g.status === "past";
     return true;
   });
@@ -36,7 +42,7 @@ export default function GamesLibrary() {
             aria-pressed={filter === f.key}
             onClick={() => setFilter(f.key)}
           >
-            {f.label}
+            {f.label} <span className="games-filter-count">{counts[f.key]}</span>
           </button>
         ))}
       </div>

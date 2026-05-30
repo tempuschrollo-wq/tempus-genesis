@@ -4,18 +4,20 @@ import Footer from "@/components/sections/Footer";
 import Reveal from "@/components/Reveal";
 import SectionTransition from "@/components/SectionTransition";
 import GamesLibrary from "@/components/GamesLibrary";
-import { historyTitles } from "@/components/gamesData";
+import { featuredGames, historyGames } from "@/components/gamesData";
+
+const totalCount = featuredGames.length + historyGames.length;
 
 export const metadata: Metadata = {
   title: "Game Library · Tempus Genesis",
   description:
-    "The full Tempus Genesis game library. 40+ Web3 titles across live and past seasons, from featured games we actively cover to our wider history.",
+    "The full Tempus Genesis game library. 40+ verified Web3 titles across active and past seasons, from the games we actively cover to our wider history.",
   openGraph: {
     type: "website",
     siteName: "Tempus Genesis",
     title: "Game Library · Tempus Genesis",
     description:
-      "40+ Web3 games across live and past seasons. Featured titles plus the full history Tempus Genesis has shown up for.",
+      "40+ verified Web3 games across active and past seasons. Featured titles plus the full history Tempus Genesis has shown up for.",
     images: ["/assets/OG-share.png"],
   },
 };
@@ -36,9 +38,10 @@ export default function GamesPage() {
               <p className="section-eye games-page-eye">Game Portfolio</p>
               <h1 className="games-page-title">The full library</h1>
               <p className="games-page-sub">
-                40+ Web3 titles across live and past seasons, from the games
-                we actively cover today to the wider history Tempus Genesis has
-                shown up for since 2023.
+                {totalCount} verified Web3 titles. {featuredGames.length}{" "}
+                featured games we actively cover, and {historyGames.length} more
+                across the wider history Tempus Genesis has shown up for since
+                2023.
               </p>
             </Reveal>
           </div>
@@ -68,7 +71,7 @@ export default function GamesPage() {
 
         <SectionTransition num="◆" label="HISTORY" major />
 
-        {/* 3 — FULL HISTORY CHIPS */}
+        {/* 3 — FULL HISTORY (enriched text entries, no logos) */}
         <section className="games-page-section is-tight">
           <div className="section-frame tg-container">
             <Reveal>
@@ -80,17 +83,38 @@ export default function GamesPage() {
                     Everywhere else we&apos;ve <em>played</em>
                   </h2>
                   <p className="section-lead">
-                    A selection of the other Web3 titles we&apos;ve taken part
-                    in over the years. Names only, no live/past status claimed.
+                    {historyGames.length} other Web3 titles Tempus Genesis has
+                    taken part in over the years, with genre and chain for each.
                   </p>
                 </div>
               </div>
             </Reveal>
             <Reveal>
-              <ul className="games-history" aria-label="Other Web3 games played">
-                {historyTitles.map((name) => (
-                  <li key={name} className="games-chip">
-                    {name}
+              <ul
+                className="games-history-grid"
+                aria-label="Other Web3 games played"
+              >
+                {historyGames.map((g) => (
+                  <li key={g.name} className="games-hist">
+                    <div className="games-hist-name">
+                      {g.officialLink ? (
+                        <a
+                          href={g.officialLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {g.name}
+                        </a>
+                      ) : (
+                        g.name
+                      )}
+                    </div>
+                    <div className="games-hist-meta">
+                      <span className="games-hist-genre">
+                        {g.genre.join(" / ")}
+                      </span>
+                      <span className="games-hist-chain">{g.chain}</span>
+                    </div>
                   </li>
                 ))}
               </ul>

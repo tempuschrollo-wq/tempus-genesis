@@ -1,44 +1,28 @@
-// Verified games dataset (WS25). Featured render as logo cards; history
-// render as text-only entries (no logos exist for them).
+# TG Games — Full Verified Dataset (41 titles)
 
-export interface FeaturedGame {
-  name: string;
-  status: "active" | "past";
-  genre: string[];
-  chain: string;
-  platform: string[];
-  description: string;
-  tags: string[];
-  officialLink: string | null;
-  // TG-specific: exact existing logo filename in public/assets/.
-  img: string;
-}
+Two exports, identical shape. `featuredGames` (9, web-verified by Ndut+Claude) render as cards with logos. `historyGames` (32, verified via Research) render as enriched text entries (NO logos exist for these, do not load images).
 
-export interface HistoryGame {
-  name: string;
-  status: "history";
-  genre: string[];
-  chain: string;
-  platform: string[];
-  description: string;
-  tags: string[];
-  officialLink: string | null;
-}
+Status tiers: "active" and "past" for featured; "history" for the 32.
 
-// 9 featured. img maps each to its exact existing logo file
-// (Call of the VoYd's file is "callofthevoyd-logo.png").
-export const featuredGames: FeaturedGame[] = [
+## Decisions applied (Ndut, May 2026)
+- No shutdown/defunct language anywhere: descriptions for Ember Sword, Nyan Heroes, Blankos Block Party, and Pirate Nation are neutral, with no "shut down" or "rug" claims.
+- Sorare chain: Solana.
+- Big Time chain: Ethereum (Open Loot).
+- Genre fixes confirmed: Call of the VoYd = Roguelite / Top-down Shooter; The Desolation = Looter-Shooter / Co-op.
+
+---
+
+```ts
+export const featuredGames = [
   {
     name: "RavenQuest",
     status: "active",
     genre: ["MMORPG"],
     chain: "Immutable zkEVM",
     platform: ["PC"],
-    description:
-      "Top-down fantasy MMORPG by Tavernlight Games, built on the Ravendawn foundation. Free to play, with NFT land, a player-driven economy, and the QUEST token.",
+    description: "Top-down fantasy MMORPG by Tavernlight Games, built on the Ravendawn foundation. Free to play, with NFT land, a player-driven economy, and the QUEST token.",
     tags: ["MMORPG", "Free-to-Play", "NFT", "Immutable"],
     officialLink: null,
-    img: "raven-logo.png",
   },
   {
     name: "Big Time",
@@ -46,11 +30,9 @@ export const featuredGames: FeaturedGame[] = [
     genre: ["Action RPG"],
     chain: "Ethereum (Open Loot)",
     platform: ["PC"],
-    description:
-      "Multiplayer action RPG where squads travel through time and space across procedurally generated dungeons. Free to play, with a cosmetic NFT economy via Open Loot.",
+    description: "Multiplayer action RPG where squads travel through time and space across procedurally generated dungeons. Free to play, with a cosmetic NFT economy via Open Loot.",
     tags: ["Action RPG", "Free-to-Play", "NFT", "Open Loot"],
     officialLink: null,
-    img: "bigtime-logo.jpg",
   },
   {
     name: "Thetan Arena",
@@ -58,11 +40,9 @@ export const featuredGames: FeaturedGame[] = [
     genre: ["MOBA", "Battle Royale"],
     chain: "BNB Chain",
     platform: ["PC", "Android", "iOS"],
-    description:
-      "Blockchain MOBA and battle royale by Wolffun Games, with fast solo and team matches. Free to play, with NFT heroes and the THC and THG tokens.",
+    description: "Blockchain MOBA and battle royale by Wolffun Games, with fast solo and team matches. Free to play, with NFT heroes and the THC and THG tokens.",
     tags: ["MOBA", "Battle Royale", "Free-to-Play", "Esports"],
     officialLink: "https://thetanarena.com",
-    img: "thetanarena-logo.jpg",
   },
   {
     name: "Call of the VoYd",
@@ -70,11 +50,9 @@ export const featuredGames: FeaturedGame[] = [
     genre: ["Roguelite", "Top-down Shooter"],
     chain: "Immutable zkEVM (Polygon)",
     platform: ["Android", "iOS"],
-    description:
-      "Roguelite top-down shooter for mobile by Mystic Games. Free to play, with optional NFT abilities and the VoYd token.",
+    description: "Roguelite top-down shooter for mobile by Mystic Games. Free to play, with optional NFT abilities and the VoYd token.",
     tags: ["Roguelite", "Shooter", "Mobile", "Free-to-Play"],
     officialLink: null,
-    img: "callofthevoyd-logo.png",
   },
   {
     name: "Blast Royale",
@@ -82,11 +60,9 @@ export const featuredGames: FeaturedGame[] = [
     genre: ["Battle Royale"],
     chain: "Immutable zkEVM (Polygon)",
     platform: ["iOS", "Android"],
-    description:
-      "Mobile top-down battle royale by First Light Games, with short six-minute matches. Free to play, with NFT equipment and the BLST token.",
+    description: "Mobile top-down battle royale by First Light Games, with short six-minute matches. Free to play, with NFT equipment and the BLST token.",
     tags: ["Battle Royale", "Mobile", "Free-to-Play", "NFT"],
     officialLink: "https://blastroyale.com",
-    img: "blastroyale-logo.jpg",
   },
   {
     name: "The Desolation",
@@ -94,11 +70,9 @@ export const featuredGames: FeaturedGame[] = [
     genre: ["Looter-Shooter", "Co-op"],
     chain: "Immutable (Open Loot)",
     platform: ["PC", "Mobile"],
-    description:
-      "Co-op sci-fi looter-shooter by Stratosphere Games, set on a devastated future Earth. Players run extraction missions and customize Exo Suits, with NFT gear via Open Loot.",
+    description: "Co-op sci-fi looter-shooter by Stratosphere Games, set on a devastated future Earth. Players run extraction missions and customize Exo Suits, with NFT gear via Open Loot.",
     tags: ["Looter-Shooter", "Co-op", "Sci-fi", "Open Loot"],
     officialLink: "https://www.thedesolation-online.com",
-    img: "thedesolation-logo.jpg",
   },
   {
     name: "Cambria",
@@ -106,11 +80,9 @@ export const featuredGames: FeaturedGame[] = [
     genre: ["MMO"],
     chain: "Blast, Ronin, Abstract",
     platform: ["Browser"],
-    description:
-      "Risk-to-earn MMO with a RuneScape-inspired top-down fantasy world. Features Gold Rush resource runs and a Duel Arena where players wager ETH. Runs across Blast, Ronin, and Abstract.",
+    description: "Risk-to-earn MMO with a RuneScape-inspired top-down fantasy world. Features Gold Rush resource runs and a Duel Arena where players wager ETH. Runs across Blast, Ronin, and Abstract.",
     tags: ["MMO", "Risk-to-Earn", "PvP", "Multi-chain"],
     officialLink: null,
-    img: "cambria-logo.png",
   },
   {
     name: "Sunflower Land",
@@ -118,11 +90,9 @@ export const featuredGames: FeaturedGame[] = [
     genre: ["Farming Sim", "RPG"],
     chain: "Polygon",
     platform: ["Browser"],
-    description:
-      "Open-source Web3 farming simulator by Thought Farm. Players grow crops, raise animals, and craft NFTs, with the FLOWER token. Free to start.",
+    description: "Open-source Web3 farming simulator by Thought Farm. Players grow crops, raise animals, and craft NFTs, with the FLOWER token. Free to start.",
     tags: ["Farming", "Open-source", "Free-to-Play", "Polygon"],
     officialLink: "https://www.sunflower-land.com",
-    img: "sunflowerland-logo.png",
   },
   {
     name: "MapleStory Universe",
@@ -130,16 +100,13 @@ export const featuredGames: FeaturedGame[] = [
     genre: ["MMORPG"],
     chain: "Avalanche (custom L1)",
     platform: ["PC"],
-    description:
-      "Nexon's Web3 expansion of MapleStory, led by its blockchain arm Nexpace. Flagship title MapleStory N is a 2D side-scrolling MMORPG with player-owned assets and the NXPC and NESO tokens.",
+    description: "Nexon's Web3 expansion of MapleStory, led by its blockchain arm Nexpace. Flagship title MapleStory N is a 2D side-scrolling MMORPG with player-owned assets and the NXPC and NESO tokens.",
     tags: ["MMORPG", "Nexon", "Avalanche", "Free-to-Play"],
     officialLink: null,
-    img: "maplestory-logo.png",
   },
-];
+] as const;
 
-// 32 history titles. Text-only, no logos.
-export const historyGames: HistoryGame[] = [
+export const historyGames = [
   { name: "Axie Infinity", status: "history", genre: ["Creature Battler", "Card Battler", "Strategy"], chain: "Ronin", platform: ["PC", "Mobile"], description: "Axie Infinity is a creature collecting and battling game built around Axies. Players collect, breed, and battle teams of digital pets across multiple Axie game modes.", tags: ["creatures", "battler", "ronin", "collectibles"], officialLink: "https://axieinfinity.com/" },
   { name: "The Sandbox", status: "history", genre: ["Metaverse", "Creator Platform", "Sandbox"], chain: "Ethereum, Polygon", platform: ["PC", "Browser"], description: "The Sandbox is a creator focused metaverse where users build worlds, experiences, and voxel assets. LAND and ecosystem assets use blockchain ownership across Ethereum and Polygon infrastructure.", tags: ["metaverse", "creator", "land", "voxel"], officialLink: "https://www.sandbox.game/" },
   { name: "Decentraland", status: "history", genre: ["Metaverse", "Virtual World", "Social"], chain: "Ethereum, Polygon", platform: ["Browser", "PC"], description: "Decentraland is a user owned virtual world with LAND, wearables, scenes, events, and creator tools. Ethereum is used for core ownership while Polygon is used for lower cost transactions such as wearables.", tags: ["metaverse", "land", "social", "events"], officialLink: "https://decentraland.org/" },
@@ -172,4 +139,5 @@ export const historyGames: HistoryGame[] = [
   { name: "My Crypto Heroes", status: "history", genre: ["RPG", "Turn Based Battle"], chain: "Ethereum", platform: ["Browser", "Mobile"], description: "My Crypto Heroes is a Japanese blockchain RPG where players collect historical heroes, train them, complete quests, and battle in tournaments. Its game assets have used Ethereum based NFT standards.", tags: ["rpg", "turn based", "ethereum", "heroes"], officialLink: "https://www.mycryptoheroes.net/" },
   { name: "CryptoKitties", status: "history", genre: ["Digital Pet", "Collectible"], chain: "Ethereum", platform: ["Browser"], description: "CryptoKitties is an early blockchain game where players collect, breed, and trade digital cats. Each kitty is represented as an NFT on Ethereum.", tags: ["collectibles", "cats", "ethereum", "early web3"], officialLink: "https://www.cryptokitties.co/" },
   { name: "Mines of Dalarnia", status: "history", genre: ["Action", "Platform Mining", "Adventure"], chain: "BNB Chain, Chromia", platform: ["PC", "Browser"], description: "Mines of Dalarnia is a platform mining adventure game where players gather resources, craft equipment, and explore deeper mines. It has been listed on BNB Chain and later integrated Chromia infrastructure.", tags: ["mining", "platformer", "adventure", "bnb"], officialLink: "https://www.minesofdalarnia.com/" },
-];
+] as const;
+```

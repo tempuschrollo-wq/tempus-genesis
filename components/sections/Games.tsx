@@ -2,7 +2,7 @@ import Link from "next/link";
 import Reveal from "../Reveal";
 import InteractiveGlow from "../InteractiveGlow";
 import GameCard from "../GameCard";
-import { games } from "../gamesData";
+import { featuredGames } from "../gamesData";
 
 export default function Games() {
   return (
@@ -31,11 +31,11 @@ export default function Games() {
 
         <Reveal stagger>
           <div className="games-layout">
-            {games.map((g, i) => (
+            {featuredGames.map((g, i) => (
               <GameCard key={g.name} game={g} index={i} />
             ))}
             <InteractiveGlow className="more-games">
-              <div className="more-games-num">+31</div>
+              <div className="more-games-num">+32</div>
               <div className="more-games-text">
                 More titles in our history that didn&apos;t make this list.
                 We&apos;ve shown up for 40+ Web3 games since 2023, and we

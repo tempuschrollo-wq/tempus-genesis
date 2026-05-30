@@ -477,6 +477,9 @@ h1,h2,h3{font-family:var(--font-fraunces),serif;font-weight:400;line-height:1.05
 .game-info{padding:1.8rem 1.8rem 2rem;}
 .game-name{font-family:var(--font-fraunces),serif;font-weight:400;font-size:1.55rem;color:#f4ead4;margin-bottom:0.5rem;line-height:1.05;letter-spacing:-0.01em;font-variation-settings:"opsz" 36;}
 .game-genre{font-family:var(--font-mono),monospace;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--bone-mute);font-weight:500;}
+.game-name-link{color:inherit;text-decoration:none;transition:color 0.2s;}
+.game-name-link:hover{color:var(--gold);}
+.game-chain{font-family:var(--font-mono),monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(212,175,55,0.55);font-weight:500;margin-top:0.4rem;}
 
 .more-games{
   grid-column:1 / -1;
@@ -1192,4 +1195,34 @@ textarea.form-input{resize:vertical;min-height:100px;}
 .legal-body li::before{content:'';position:absolute;left:0;top:0.62em;width:5px;height:5px;border-radius:50%;background:var(--gold);}
 @media (max-width:768px){
   .legal{padding-block:calc(var(--section-y-tight) + 2.5rem) var(--section-y-tight);}
+}
+
+/* ── GAMES: filter counts + enriched history grid (WS25) ── */
+.games-filter-count{opacity:0.65;font-weight:500;}
+
+.games-history-grid{
+  list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(10px,1.4vw,14px);margin-top:var(--block-gap);
+}
+.games-hist{
+  border:1px solid var(--border-f);background:rgba(8,8,8,0.5);
+  padding:1rem 1.1rem;border-radius:8px;
+  transition:border-color 0.2s ease,background 0.2s ease;
+}
+.games-hist:hover{border-color:rgba(212,175,55,0.3);background:rgba(212,175,55,0.04);}
+.games-hist-name{font-family:var(--font-fraunces),serif;font-weight:500;font-size:1.1rem;line-height:1.15;letter-spacing:-0.005em;color:#f4ead4;}
+.games-hist-name a{color:inherit;text-decoration:none;transition:color 0.2s;}
+.games-hist-name a:hover{color:var(--gold);}
+.games-hist-meta{display:flex;flex-direction:column;gap:3px;margin-top:0.5rem;}
+.games-hist-genre{font-family:var(--font-mono),monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--bone-mute);font-weight:500;line-height:1.45;}
+.games-hist-chain{font-family:var(--font-mono),monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(212,175,55,0.6);font-weight:500;line-height:1.45;}
+
+@media (max-width:900px){
+  .games-history-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:768px){
+  .game-chain{font-size:8px;margin-top:0.25rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+}
+@media (max-width:560px){
+  .games-history-grid{grid-template-columns:1fr;}
 }
