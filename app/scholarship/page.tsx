@@ -13,13 +13,13 @@ const DISCORD_INVITE_URL = "https://discord.gg/nwRam2xxFZ";
 export const metadata: Metadata = {
   title: "Scholarship Program · Tempus Genesis",
   description:
-    "Skill is the only entry fee. Tempus Genesis backs talented Web3 players with assets, a transparent revenue split, mentorship, and real hardware. See the rigs we've delivered to scholars.",
+    "How Tempus Genesis runs its scholar program. Selective, periodic intake backed by assets, a transparent revenue split, mentorship, and real hardware delivered to scholars.",
   openGraph: {
     type: "website",
     siteName: "Tempus Genesis",
     title: "Scholarship Program · Tempus Genesis",
     description:
-      "Full asset support, transparent revenue split, coaching, and a path to independence for skilled Web3 players. Real PC builds delivered to scholars.",
+      "How Tempus Genesis runs its scholar program. Selective intake, full asset support, a transparent revenue split, coaching, and real PC builds delivered to scholars.",
     images: ["/assets/OG-share.png"],
   },
 };
@@ -50,24 +50,32 @@ const benefits = [
 const steps = [
   {
     num: "01",
-    title: "Apply via Discord",
-    desc: "Tell us which game you play, your skill level, and how many hours you can commit.",
+    title: "Selection",
+    desc: "Intake runs in waves, not always open. We select from active, proven players when a slot frees up. Openings are announced in Discord.",
   },
   {
     num: "02",
-    title: "Get Matched",
-    desc: "We pair you with a guild manager based on game, timezone, and skill profile.",
+    title: "Matching",
+    desc: "We pair each scholar with a guild manager based on game, timezone, and skill profile.",
   },
   {
     num: "03",
     title: "Play & Earn",
-    desc: "Receive assets, start playing, earn your split of rewards every cycle.",
+    desc: "Scholars receive assets and play active cycles, earning their agreed split each cycle.",
   },
   {
     num: "04",
     title: "Graduate",
-    desc: "Build your own portfolio and become an independent player or manager.",
+    desc: "Top performers build their own portfolio and become independent players or managers.",
   },
+];
+
+const responsibilities = [
+  "Stay active and play the cycles you and your manager agree on.",
+  "Keep communication open with your guild manager.",
+  "Report your results honestly, the good runs and the bad ones.",
+  "Treat lent assets and any delivered hardware with care.",
+  "Keep good standing in the community. No account sharing or misuse.",
 ];
 
 // Built from the exact filenames in public/assets/page (verified via ls).
@@ -118,6 +126,10 @@ const eligibility = [
 
 const faqs = [
   {
+    q: "Is the scholarship always open?",
+    a: "No. Intake is selective and runs in waves as slots free up. We announce openings in Discord, so the best move is to join and be active there before the next wave.",
+  },
+  {
     q: "Does the scholarship cost anything?",
     a: "No. There is zero upfront cost. We provide the NFT assets and in-game items; you bring the skill and the hours. You never pay to join.",
   },
@@ -135,7 +147,7 @@ const faqs = [
   },
   {
     q: "How does matching work?",
-    a: "After you apply on Discord, we pair you with a guild manager based on your game, timezone, and skill profile, so you're set up with the right portfolio and the right mentor from day one.",
+    a: "Once you are selected, we pair you with a guild manager based on your game, timezone, and skill profile, so you start with the right portfolio and the right mentor.",
   },
 ];
 
@@ -156,10 +168,20 @@ export default function ScholarshipPage() {
               <h1 className="schp-hero-title">
                 Skill is the <span>only</span> entry fee
               </h1>
+              <div className="schp-status">
+                <span className="schp-status-pill">
+                  <span className="schp-status-dot" aria-hidden="true" />
+                  Currently selective
+                </span>
+                <span className="schp-status-note">
+                  Openings are announced in Discord.
+                </span>
+              </div>
               <p className="schp-hero-sub">
-                We back talented players who have the skill but not the assets.
-                Full asset support, a transparent revenue split, real
-                mentorship, and a path to independence.
+                This is how Tempus Genesis runs its scholar program. We back
+                proven players with assets, a transparent revenue split, real
+                mentorship, and a path to independence. Intake is selective and
+                runs in waves, not always open.
               </p>
               <div className="schp-hero-actions">
                 <a
@@ -168,10 +190,10 @@ export default function ScholarshipPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Apply via Discord <IconArrowRight size={14} />
+                  Join Discord for future openings <IconArrowRight size={14} />
                 </a>
                 <a className="btn btn-ghost" href="#rigs">
-                  See delivered rigs
+                  See the proof
                 </a>
               </div>
             </Reveal>
@@ -219,10 +241,14 @@ export default function ScholarshipPage() {
               <div className="section-header">
                 <div className="section-num">ii</div>
                 <div className="section-meta">
-                  <p className="section-eye">How it works</p>
+                  <p className="section-eye">How we run it</p>
                   <h2 className="section-title">
-                    From application to <em>independence</em>
+                    How we manage our <em>scholars</em>
                   </h2>
+                  <p className="section-lead">
+                    Intake is periodic, not always open. Here is how a scholar
+                    moves from selection to independence.
+                  </p>
                 </div>
               </div>
             </Reveal>
@@ -303,9 +329,9 @@ export default function ScholarshipPage() {
                 <div className="section-header schp-header-stacked">
                   <div className="section-num">iv</div>
                   <div className="section-meta">
-                    <p className="section-eye">Who can apply</p>
+                    <p className="section-eye">What we look for</p>
                     <h2 className="section-title">
-                      The <em>requirements</em>
+                      Who we <em>select</em>
                     </h2>
                   </div>
                 </div>
@@ -326,16 +352,47 @@ export default function ScholarshipPage() {
           </div>
         </section>
 
-        {/* 6 — FAQ */}
+        {/* 6 — SCHOLAR RESPONSIBILITIES */}
+        <section className="schp-section is-tight">
+          <div className="section-frame tg-container">
+            <div className="schp-two-col">
+              <Reveal>
+                <div className="section-header schp-header-stacked">
+                  <div className="section-num">v</div>
+                  <div className="section-meta">
+                    <p className="section-eye">The other side</p>
+                    <h2 className="section-title">
+                      Scholar <em>responsibilities</em>
+                    </h2>
+                  </div>
+                </div>
+              </Reveal>
+              <Reveal>
+                <ul className="schp-elig">
+                  {responsibilities.map((item, i) => (
+                    <li key={i} className="schp-elig-item">
+                      <span className="schp-elig-mark">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
+        {/* 7 — FAQ */}
         <section className="schp-section is-tight">
           <div className="section-frame tg-container">
             <Reveal>
               <div className="section-header">
-                <div className="section-num">v</div>
+                <div className="section-num">vi</div>
                 <div className="section-meta">
                   <p className="section-eye">Questions</p>
                   <h2 className="section-title">
-                    Before you <em>apply</em>
+                    Common <em>questions</em>
                   </h2>
                 </div>
               </div>
@@ -356,7 +413,7 @@ export default function ScholarshipPage() {
           </div>
         </section>
 
-        {/* 7 — FINAL CTA BAND */}
+        {/* 8 — FINAL CTA BAND */}
         <section className="schp-section is-tight">
           <div className="tg-container">
             <Reveal>
@@ -365,9 +422,9 @@ export default function ScholarshipPage() {
                 <span className="schol-flow-corner tr"></span>
                 <span className="schol-flow-corner bl"></span>
                 <span className="schol-flow-corner br"></span>
-                <p className="section-eye schp-cta-eye">Ready when you are</p>
+                <p className="section-eye schp-cta-eye">Future openings</p>
                 <h2 className="schp-cta-title">
-                  Bring the skill. We&apos;ll bring the rest.
+                  Intake opens in waves. Be there when it does.
                 </h2>
                 <div className="schp-hero-actions">
                   <a
@@ -376,7 +433,7 @@ export default function ScholarshipPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Apply via Discord <IconArrowRight size={14} />
+                    Join Discord for future openings <IconArrowRight size={14} />
                   </a>
                   <Link className="btn btn-ghost" href="/">
                     Back to home <IconArrowUpRight size={14} />

@@ -31,8 +31,8 @@ const benefits = [
 const steps = [
   {
     num: "01",
-    title: "Apply via Discord",
-    desc: "Tell us which game you play, your skill level, and how many hours you can commit.",
+    title: "Selection",
+    desc: "Intake runs in waves, not always open. We select from active, proven players. Openings are announced in Discord.",
   },
   {
     num: "02",
@@ -68,9 +68,9 @@ export default function Scholarship() {
                 Skill is the <em>only</em> entry fee
               </h2>
               <p className="section-lead">
-                We back talented players who have the skill but not the
-                assets. Full asset support, transparent revenue split, and a
-                real path to independence.
+                We back proven players who have the skill but not the assets.
+                Full asset support, transparent revenue split, and a real path
+                to independence. Intake is selective and announced in Discord.
               </p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Scholarship() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Apply for Scholarship <IconArrowRight size={14} />
+                Join Discord for future openings <IconArrowRight size={14} />
               </a>
               <Link className="schol-full-link" href="/scholarship">
                 See the full program <IconArrowRight size={13} />
